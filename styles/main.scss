@@ -1,0 +1,60 @@
+@import "./mixins.scss";
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 15px !important;
+  overflow-x: hidden;
+  @include sm-screen {
+    font-size: 14px !important;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body.open-nav {
+  overflow: hidden;
+  .navbar {
+    ul.nav-menu {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: #333;
+      top: 5rem;
+      left: 0;
+      z-index: 1000;
+      color: white;
+      display: block !important;
+    }
+    svg {
+      path:first-child {
+        transform: rotate(45deg) translateY(5px);
+      }
+      path:last-child {
+        transform: rotate(-45deg) translateY(-5px);
+      }
+    }
+  }
+}
+
+$primary-color: #23036a;
+$shadow: 0 0 3px 0 rgba(0, 0, 0, 0.45);
+
+@import "./navbar.scss";
+@import "./container.scss";
+@import "./header.scss";
+@import "./projects.scss";
+@import "./footer.scss";

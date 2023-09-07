@@ -1,0 +1,39 @@
+@mixin sm-screen {
+  @media only screen and (max-width: 767px) {
+    @at-root {
+      & {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin md-screen {
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    @at-root {
+      & {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin lg-screen {
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    @at-root {
+      & {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin vlg-screen {
+  @media only screen and (min-width: 1200px) {
+    @at-root {
+      & {
+        @content;
+      }
+    }
+  }
+}

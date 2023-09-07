@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "watch": "sass --watch --no-source-map ./styles/main.scss ./style.css",
+    "prefix-css": "postcss style.css --config=postcss.config.js --replace --no-map",
+    "build": "sass ./styles/main.scss --style=compressed style.css --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "postcss-cli": "latest"
+  },
+  "browserslist": [
+    "> 0.5%"
+  ]
+}

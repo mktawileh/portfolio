@@ -1,0 +1,97 @@
+.navbar {
+  z-index: inherit;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    .menu {
+      svg {
+        width: 3rem;
+        display: none;
+        path {
+          stroke: black;
+          stroke-width: 3px;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          transition: ease-in-out 222ms;
+          transform-origin: center;
+        }
+        
+      }
+      ul {
+        display: flex;
+        li {
+          &:not(:last-child) {
+            margin-right: 1rem;
+          }
+          a {
+            display: block;
+            padding: 1rem;
+            cursor: pointer;
+            user-select: none;
+            transition: 155ms ease-in-out;
+            border: 2px solid transparent;
+            &:hover {
+              border-radius: 1rem;
+              background-color: rgba(0, 0, 0, 0.03);
+            }
+            &:active {
+              transform: scale(1.02);
+              border-radius: 1rem;
+              background-color: rgba(0, 0, 0, 0.05);
+              border-color: rgba($primary-color, 0.5);
+            }
+            &:focus {
+              border-radius: 1rem;
+              border-color: rgba($primary-color, 0.5);
+            }
+          }
+        }
+      }
+      @include sm-screen {
+        svg {
+          display: initial;
+        }
+        ul {
+          display: none;
+        }
+      }
+      @include md-screen {
+        svg {
+          display: initial;
+        }
+        ul {
+          display: none;
+        }
+      }
+    }
+
+    .links-container {
+      display: flex;
+      align-items: center;
+      a.link {
+        height: 2rem;
+        width: 2rem;
+        padding: 0.4rem;
+        border-radius: 1rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 111ms ease-in-out;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.4);
+        }
+        &:active {
+          transform: scale(1.03);
+        }
+        &:not(:first-child) {
+          margin-left: 1rem;
+        }
+        img {
+          width: 1.4rem;
+        }
+      }
+    }
+  }
+}

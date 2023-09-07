@@ -1,0 +1,215 @@
+.projects {
+  position: relative;
+  background-color: #1d1d1d;
+  padding-top: 180px;
+  color: white;
+  .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    svg {
+      position: relative;
+      display: block;
+      width: calc(131% + 1.3px);
+      height: 180px;
+    }
+
+    .shape-fill {
+      fill: white;
+    }
+  }
+  .content {
+    padding-bottom: 2rem;
+    .container {
+      h2 {
+        margin-bottom: 2rem;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        li {
+          display: inline-block;
+          @include vlg-screen {
+            &:nth-child(2n) {
+              padding-top: 2rem;
+            }
+            &:nth-child(3n) {
+              padding-top: 4rem;
+            }
+          }
+          @include lg-screen {
+            &:nth-child(2n) {
+              padding-top: 2rem;
+            }
+            &:nth-child(3n) {
+              padding-top: 4rem;
+            }
+          }
+          .project {
+            background: rgba(0, 0, 0, 0);
+            border-radius: 1rem;
+            position: relative;
+            padding: 1rem;
+            padding-bottom: 0;
+            text-align: center;
+            transition: 169ms ease-in-out;
+            cursor: pointer;
+            &:hover {
+              // background-color: rgba(255, 255, 255, 0.1);
+              transform: scale(1.07);
+            }
+            &:active {
+              // background-color: rgba(255, 255, 255, 0.1);
+              transform: scale(1);
+            }
+            .num {
+              position: absolute;
+              padding: 1rem;
+              font-size: 1.7rem;
+              background-color: white;
+              border-radius: 1rem;
+              color: #333;
+              bottom: 0;
+              right: 0;
+            }
+            .title {
+              text-align: left;
+              padding: 1rem 0;
+              line-height: 1rem;
+            }
+            .image {
+              width: 16rem;
+              height: 16rem;
+              overflow: hidden;
+              display: flex;
+              align-items: center;
+              background-color: #535659;
+              border-radius: 1rem 1rem 0 0;
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body > .project {
+  padding: 1rem 0;
+  padding-top: 75px;
+  position: relative;
+
+  .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    .shape-fill {
+      fill: #1d1d1d;
+    }
+
+    svg {
+      position: relative;
+      display: block;
+      width: calc(147% + 1.3px);
+      height: 75px;
+      transform: rotateY(180deg);
+    }
+  }
+
+  > .container >  a {
+    display: inline-block;
+    &:hover {
+      color: #888;
+    }
+    margin-top: 3rem;
+  }
+  .desc {
+    margin-top: 2rem;
+  }
+
+  p {
+    line-height: 2rem;
+  }
+
+  .image {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+
+  &.bayan {
+    color: #eee;
+    background-color: #535659;
+    .wave {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+
+    .wave svg {
+      position: relative;
+      display: block;
+      width: calc(136% + 1.3px);
+      height: 75px;
+      transform: rotateY(180deg);
+    }
+
+    .wave .shape-fill {
+      fill: #ffffff;
+    }
+  }
+
+  &.bayan-book {
+    color: #535659;
+    background-color: #fff;
+    .wave {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      svg {
+        position: relative;
+        display: block;
+        width: calc(136% + 1.3px);
+        height: 75px;
+      }
+      .shape-fill {
+        fill: #535659;
+      }
+    }
+    li {
+      display: inline-block;
+      margin-right: 1rem;
+      background-color: rgba(0, 0, 0, 0.04);
+      margin-bottom: 1rem;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      border-radius: 1rem;
+      h2 {
+        font-weight: 300;
+      }
+    }
+  }
+}
